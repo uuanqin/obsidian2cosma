@@ -36,16 +36,6 @@ License: GNU General Public License v3.0
 
 """
 
-# TODO: 检查并发表 fork（查一下有没有fork后merge回去的先例，纯属好奇）
-# TODO: 中英文档，分两个文件夹
-# TODO：中英博客文章
-# TODO：另写脚本。修剪html
-# TODO：部署至hexo，实现自动化流程
-# TODO: 添加中英文注释
-# TODO：项目宣传（Obsidian原帖宣传、Obsidian中文论坛宣传）
-# TODO: 你需要知道，这是为了减少平台依赖性而重写YAML解析与生成的
-# TODO: 为什么要使用abbrlink，在README中写上
-
 import os
 import platform
 import argparse
