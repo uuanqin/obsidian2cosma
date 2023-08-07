@@ -57,14 +57,14 @@ Optional arguments:
   
 ## Examples
 
-In the directory `data/` you will find an example of Obsidian vault called [LYT-Kit](https://www.linkingyourthinking.com/download-lyt-kit).
+In the directory `example/` you will find an example of Obsidian vault called [LYT-Kit](https://www.linkingyourthinking.com/download-lyt-kit).
 
 ### `obsidian2cosma` converts `LYT-Kit/` to `LYT-Kit-cosma/`
 
 At the folder root run the Python script:
 
 ```bash
-python3 obsidian2cosma.py -i data/LYT-Kit -o data/LYT-Kit-cosma --creationdate True --verbose
+python3 obsidian2cosma.py -i example/LYT-Kit -o example/LYT-Kit-cosma --creationdate True --verbose
 ```
 
 This creates a new folder `LYT-Kit-cosma/` whose Markdown files have their **internal links transformed** as follows:
@@ -78,14 +78,14 @@ The next step is to use `cosma` to **generate a graph view** of your notes which
 Once you have installed [Cosma CLI v.2.0.0-beta-1](https://cosma.graphlab.fr/en/docs/cli/user-manual/) go to the output folder and initialize the config file:
 
 ```bash
-cd data/LYT-Kit-cosma
+cd example/LYT-Kit-cosma
 cosma c
 ```
 
 It creates a `config.yml` file in which you have to fill the second field with the absolute path of the output folder:
 
 ```bash
-files_origin: '/path_to_obsidian2cosma/data/LYT-Kit-cosma'
+files_origin: '/path_to_obsidian2cosma/example/LYT-Kit-cosma'
 ```
 
 Finally, let us create the `cosmoscope.html` by running:
@@ -94,14 +94,14 @@ Finally, let us create the `cosmoscope.html` by running:
 cosma m
 ```
 
-![LYT-Kit graph view displayed by Cosma](https://github.com/kevinpolisano/obsidian2cosma/blob/main/data/LYT-Kit/LYT-kit.png)
+![LYT-Kit graph view displayed by Cosma](./example/LYT-Kit/LYT-kit.png)
 
 ### `obsidian2cosma --zettlr True` converts `LYT-Kit/` to `LYT-Kit-zettlr/`
 
 At the folder root run the Python script:
 
 ```bash
-python3 obsidian2cosma.py -i data/LYT-Kit -o data/LYT-Kit-zettlr --creationdate True --zettlr True --verbose
+python3 obsidian2cosma.py -i example/LYT-Kit -o example/LYT-Kit-zettlr --creationdate True --zettlr True --verbose
 ```
 
 This creates a new folder `LYT-Kit-zettlr/` whose Markdown files have their **internal links transformed** as follows:
