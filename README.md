@@ -1,6 +1,6 @@
 # Obsidian2cosma
 
-Language: English | [中文]()
+Language: English | [中文](./README_zh.md)
 
 This repository is forked from [kevinpolisano/obsidian2cosma](https://github.com/kevinpolisano/obsidian2cosma). It has more features and enhancements on this version:
 
@@ -12,6 +12,7 @@ This repository is forked from [kevinpolisano/obsidian2cosma](https://github.com
 * Enhancement on interaction when it was used regularly and frequently. See [this option](#`--force`).
 * Support the use of UTF-8 charset which means that more languages can be used in files' titles, front-matters and contexts instead of English only.
 * Update README.md and add a Chinese version of that.
+* Others: ID conflict detection, Program running time prompts...
 
 ## Description
 
@@ -43,7 +44,7 @@ In practise, the script follows these steps:
 ## Installation
 
 - **Download** the Python script
-- **Install packages** required: os, platform, argparse, Path, datetime, re, shutil, csv, unicodedata
+- **Install packages** required: os, platform, argparse, Path, datetime, re, shutil, csv, unicodedata, binascii
 
 ## Usage
 
@@ -85,7 +86,7 @@ In Cosma, each record should have a unique identifier. Must be a unique number. 
 
 * By default, the script will generate ordered numbers as records' ID.
 * If `--method ctime`, the script generates 14-digit identifiers in the form of a timestamp (year, month, day, hours, minutes and seconds). It will force to copy creation time when copying files to output folder. It's **Not recommended** to use this option, not only because it is time-consuming on Windows but also due to the occurrence of unexpected conditions when more than one file has the same creation time, which usually happens. 
-* if `--method abbrlink`, the script will use `abbrlink` as the record's identifiers. This feature is inspired by [rozbo/hexo-abbrlink](https://github.com/rozbo/hexo-abbrlink). It's assumed that `abbrlink` is hexadecimal string, the script just converts it to integer as the ID of a record. If `abbrlink` is not found in the front matter, the script will create one by using crc32 algorithm whose source string is `title` to get `abbrlink`.
+* if `--method abbrlink`, the script will use `abbrlink` as the record's identifiers. This feature is inspired by [rozbo/hexo-abbrlink](https://github.com/rozbo/hexo-abbrlink). It's assumed that `abbrlink` is hexadecimal string, the script just converts it to integer as the ID of a record. If `abbrlink` is not found in the front matter, the script will create one by using [CRC32](https://en.wikipedia.org/wiki/Cyclic_redundancy_check) algorithm whose source string is `title` to get `abbrlink`.
 
 ##### `--attrreplacement ATTRIBUTEPAIRS`
 
