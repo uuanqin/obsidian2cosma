@@ -28,7 +28,7 @@ Optional arguments:
   -v, --verbose                         Print changes in the terminal
 
 Editor of This version: Wanqin Wu
-Contact: 2472963374@qq.com
+Contact: wuanqin@mail.ustc.edu.cn
 Original Author: Kévin Polisano
 Contact: kevin.polisano@cnrs.fr
 
