@@ -5,11 +5,11 @@
 这个仓库由[kevinpolisano/obsidian2cosma ](https://github.com/kevinpolisano/obsidian2cosma) Fork 而来并增加了更多功能与增强：
 
 * 重写了 YAML 解析器，使之可以解析[更多格式](#解析YAML)的 YAML，摆脱特定关键字的依赖。
-* 重写了创建 ID 的逻辑。参考[此选项](#`--method METHOD`)。
-* 功能：更改 front-matter 中的关键字名称。请参阅[此选项](#`--attrreplacement ATTRIBUTEPAIRS`)。
+* 重写了创建 ID 的逻辑。参考[此选项](#--method-method)。
+* 功能：更改 front-matter 中的关键字名称。请参阅[此选项](#--attrreplacement-attributepairs)。
 * 修复了在 Windows 上复制源文件创建日期时出现的错误。
 * 提高在 Windows 上工作的效率。
-* 为频繁使用脚本提供交互增强。请参阅[此选项](#`--force`)。
+* 为频繁使用脚本提供交互增强。请参阅[此选项](#--force)。
 * 支持使用 UTF-8 字符集，中文标题文章也能用。
 * 更新 README.md 并增加其中文版本。
 * 其他：ID冲突检测、程序运行时间计算等
@@ -89,7 +89,7 @@ python obsidian2cosma.py -i input_folder_path -o output_folder_path
 * 如果 `--method ctime`，脚本将生成 14 位标识符，格式为时间戳（年、月、日、小时、分钟和秒）。它将使脚本在复制文件时强制复制创建时间。在 Windows 上复制文件创建时间是个耗时的过程，且大多数时候会出现多个文件的创建时间相同的情况，所以**不推荐**使用这个选项。
 * 如果`--method abbrlink`，脚本将使用`abbrlink`作为记录的标识符。这个特性是受到 [rozbo/hexo-abbrlink](https://github.com/rozbo/hexo-abbrlink) 启发。程序假定了`abbrlink`是一个十六进制字符串，脚本只将其转换为整数作为记录的 ID。如果 front matter 没有`abbrlink`属性，脚本将使用 [CRC32](https://zh.wikipedia.org/wiki/循環冗餘校驗) 算法加密 `title` 来获取`abbrlink`。
 
-##### `--attrreplacement ATTRIBUTEPAIRS`  
+##### `--attrreplacement ATTRIBUTEPAIRS`
 
 这个脚本提供了一个可选功能，可以更改 front matter 中 `ATTRIBUTE` 的名称。例如，`--attrreplacement categories,types` 将属性名称 '`categories`' 更改为 '`types`'。您还可以使用 `--attrreplacement oldname1,newname1 oldname2,newname2 ...`来更改更多的属性名称。
 
