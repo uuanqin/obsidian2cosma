@@ -22,9 +22,9 @@
 
 ### Cosma
 
-[Cosma](https://cosma.arthurperret.fr/) 是一个[开源应用](https://github.com/graphlab-fr/cosma)，它可以通过这种方式生成这样一个图形视图：将目录中 Markdown 文本文件之间的关系，生成一个名为 **cosmoscope.html** 的单个HTML文件中。它提供了一种简单的方式来探索、可视化以及与他人共享你的知识图谱。*软件来来去去，但数据应该保持存在。*纯文本是**不会过时的**，因此不使笔记过于依赖于特定的软件语法和能够轻松迁移它们的是十分重要的。
+[Cosma](https://cosma.arthurperret.fr/) 是一个[开源应用](https://github.com/graphlab-fr/cosma)，它可以通过这种方式生成这样一个图形视图：将目录中 Markdown 文本文件之间的关系，生成一个名为 **cosmoscope.html** 的单个 HTML 文件中。它提供了一种简单的方式来探索、可视化以及与他人共享你的知识图谱。*软件来来去去，但数据应该保持存在。*纯文本是**不会过时的**，因此不使笔记过于依赖于特定的软件语法和能够轻松迁移它们的是十分重要的。
 
-## 将Obsidian仓库转换为Cosma或Zettlr格式的Python脚本
+## 将 Obsidian 仓库转换为 Cosma 或 Zettlr 格式的 Python 脚本
 
 - Cosma使用与[Zettlr](https://zettlr.com)（另一个面向学术工作的优秀编辑器）相同的语法，其`[[internal links]]`依赖于唯一标识符`[[id]]`。
 - Obsidian则不同，它使用`[[filename]]`链接笔记文件，但限制了**互操作性**。
@@ -39,7 +39,7 @@
 1. **复制**您的 Obsidian 仓库（input folder）到另一个目录（output folder）以避免仓库内容的意外更改或丢失。以`_`开头的文件夹将被忽略。
 2. *（可选）*根据特定类型或标签**过滤**输出文件夹中的 Markdown 文件。（您也可以编辑 Cosma 的配置文件来实现这一点。请参阅 [Cosma的用户手册](https://cosma.arthurperret.fr/user-manual.html)。）
 3. 为每个 Markdown 文件创建 `id` 和 `title` 元数据字段（缺失相应字段则创建，否则忽略）
-4. **保存**关联对 `(id, title)` 的关系到CSV文件中
+4. **保存**关联对 `(id, title)` 的关系到 CSV 文件中
 5. （默认）将所有在 Obsidian 中使用的 wiki 链接`[[filename]]`**替换**为 [Cosma 双向链接语法](https://cosma.graphlab.fr/en/docs/cli/user-manual/#links)（混合 [Zettlr语法](https://docs.zettlr.com/en/academic/zkn-method/) 和[Obsidian使用别名的样式](https://help.obsidian.md/How+to/Add+aliases+to+note)，即`[[id|alias]]`）。或者增加选项`--zettlr=True`将其替换为 [Zettlr双向链接语法 ](https://docs.zettlr.com/en/academic/zkn-method/)。
 6. *（可选）*替换 Obsidian [Juggl语法](https://juggl.io/Link+Types) 中的 **Typed links** `- prefix [[link]]`为 [Cosma 链接语法](https://cosma.graphlab.fr/en/docs/cli/user-manual/#links) 中更灵活的语法`[[prefix:link]]`
 
@@ -83,7 +83,7 @@ python obsidian2cosma.py -i input_folder_path -o output_folder_path
 
 ##### `--method METHOD`
 
-在Cosma中，每个记录都应该有一个唯一的数字标识符。如果`id`没有在 front matter 中找到，脚本将自动创建。
+在 Cosma 中，每个记录都应该有一个唯一的数字标识符。如果`id`没有在 front matter 中找到，脚本将自动创建。
 
 * 默认情况下，脚本将生成有序数字作为记录的 ID。
 * 如果 `--method ctime`，脚本将生成 14 位标识符，格式为时间戳（年、月、日、小时、分钟和秒）。它将使脚本在复制文件时强制复制创建时间。在 Windows 上复制文件创建时间是个耗时的过程，且大多数时候会出现多个文件的创建时间相同的情况，所以**不推荐**使用这个选项。
@@ -118,9 +118,9 @@ python3 obsidian2cosma.py -i example/LYT-Kit -o example/LYT-Kit-cosma --method c
 - `[[filename]]`替换为`[[id|filename]]`
 - `[[filename|alias]]`替换为`[[id|alias]]`
 
-其中 `id`是文件名为 `filename.md`的文件标识符， 即CSV文件 `title2id.csv` 保存了键值对 `title2id["filename"]="id"` 。
+其中 `id` 是文件名为 `filename.md` 的文件标识符， 即 CSV 文件 `title2id.csv` 保存了键值对 `title2id["filename"]="id"` 。
 
-下一步是使用 `cosma` 您知识库的**关系视图**，它将导出为单个HTML文件。
+下一步是使用 `cosma` 您知识库的**关系视图**，它将导出为单个 HTML 文件。
 
 安装 [Cosma CLI v.2.0.2 ](https://cosma.arthurperret.fr/installing.html)后，进入输出文件夹并初始化配置文件:
 
@@ -145,7 +145,7 @@ cosma m
 
 ### 使用`obsidian2cosma --zettlr True`将`LYT-Kit/`转换为`LYT-Kit-zettlr/`  
 
-在文件夹根目录运行Python脚本:
+在文件夹根目录运行 Python 脚本:
 
 ```bash
 python3 obsidian2cosma.py -i example/LYT-Kit -o example/LYT-Kit-zettlr --method ctime --zettlr True --verbose
