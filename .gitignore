@@ -1,7 +1,3 @@
-data/citations
-data/pandoc
-output/
-title2id.csv
-log.txt
-.DS_Store
-cosmoscope.py
+.idea
+/test/
+/venv/
