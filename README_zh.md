@@ -5,11 +5,11 @@
 这个仓库由[kevinpolisano/obsidian2cosma ](https://github.com/kevinpolisano/obsidian2cosma) Fork 而来并增加了更多功能与增强：
 
 * 重写了 YAML 解析器，使之可以解析[更多格式](#解析YAML)的 YAML，摆脱特定关键字的依赖。
-* 重写了创建 ID 的逻辑。参考[此选项](#`--method METHOD`)。
-* 功能：更改 front-matter 中的关键字名称。请参阅[此选项](#`--attrreplacement ATTRIBUTEPAIRS`)。
+* 重写了创建 ID 的逻辑。参考[此选项](#--method-METHOD)。
+* 功能：更改 front-matter 中的关键字名称。请参阅[此选项](#--attrreplacement-ATTRIBUTEPAIRS)。
 * 修复了在 Windows 上复制源文件创建日期时出现的错误。
 * 提高在 Windows 上工作的效率。
-* 为频繁使用脚本提供交互增强。请参阅[此选项](#`--force`)。
+* 为频繁使用脚本提供交互增强。请参阅[此选项](#--force)。
 * 支持使用 UTF-8 字符集，中文标题文章也能用。
 * 更新 README.md 并增加其中文版本。
 * 其他：ID冲突检测、程序运行时间计算等

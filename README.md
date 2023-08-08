@@ -4,12 +4,12 @@ Language: English | [中文](./README_zh.md)
 
 This repository is forked from [kevinpolisano/obsidian2cosma](https://github.com/kevinpolisano/obsidian2cosma). It has more features and enhancements on this version:
 
-* Rewrite the function of YAML-parser. Now it can parse [more formats](#Parser of YAML) of YAML front-matter no matter what the key's name is.
-* Rewrite the logic of creating IDs and provide options. See [this option](#`--method METHOD`).
-* An optional function to change keys' name in the front-matter. See [this option](#`--attrreplacement ATTRIBUTEPAIRS`).
+* Rewrite the function of YAML-parser. Now it can parse [more formats](#Parser-of-YAML) of YAML front-matter no matter what the key's name is.
+* Rewrite the logic of creating IDs and provide options. See [this option](#--method-METHOD).
+* An optional function to change keys' name in the front-matter. See [this option](#--attrreplacement-ATTRIBUTEPAIRS).
 * Fix bugs that occur when copying the creation date of source file to destination file on Windows. 
 * Enhancement on processing when it works on Windows.
-* Enhancement on interaction when it was used regularly and frequently. See [this option](#`--force`).
+* Enhancement on interaction when it was used regularly and frequently. See [this option](#--force).
 * Support the use of UTF-8 charset which means that more languages can be used in files' titles, front-matters and contexts instead of English only.
 * Update README.md and add a Chinese version of that.
 * Others: ID conflict detection, Program running time prompts...
@@ -209,6 +209,7 @@ You can add new issues to let us know which formats should be recognized or subm
 ### Contect
 
 Editor of This version: Wanqin Wu (wuanqin@mail.ustc.edu.cn)
+
 Original Author: Kévin Polisano (kevin.polisano@cnrs.fr)
 
 ### Licence
