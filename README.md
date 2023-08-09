@@ -158,7 +158,7 @@ These files are now readable by [Zettlr](https://docs.zettlr.com/fr/academic/zkn
 ## Issues
 
 Known bugs in Cosma:
-- Chronological mode does not work as expected.
+- Chronological mode does not work as expected. See https://github.com/graphlab-fr/cosma/issues/56.
 
 ## Related repository
 
