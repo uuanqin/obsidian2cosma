@@ -162,7 +162,7 @@ python3 obsidian2cosma.py -i example/LYT-Kit -o example/LYT-Kit-zettlr --method 
 
 Cosma的已知bug：
 
-- Chronological mode 没有按预期工作。参见：https://github.com/graphlab-fr/cosma/issues/56
+- Chronological mode 没有按预期工作。参见 [issues-56](https://github.com/graphlab-fr/cosma/issues/56)。
 
 ## 相关仓库
 
