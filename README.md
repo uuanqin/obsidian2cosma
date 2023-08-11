@@ -160,6 +160,8 @@ These files are now readable by [Zettlr](https://docs.zettlr.com/fr/academic/zkn
 Known bugs in Cosma:
 - Chronological mode does not work as expected. See [issues-56](https://github.com/graphlab-fr/cosma/issues/56).
 
+It's better not to set output folder in your Obsidian vault. It will confuse Obsidian to create or change wiki links and finally cause this script to run incorrectly.
+
 ## Related repository
 
 `òbsidian2cosma` converts an Obsidian vault into a collection of Markdown files readable by Cosma and Zettlr. Conversely, it is possible to implement a script `zettlr2obsidian`: [Conversion tool to make Zettlr markdown files be visible in Graph Mode in Obsidian](https://gist.github.com/KarlClinckspoor/4ec995fd506ec6483b8e02d8afc388fc/raw/c787747da28d97080c64077352ec6d41e80ae6f5/conversion.py)
@@ -206,12 +208,16 @@ What parts of the YAML specifications does it support? It supports:
 
 You can add new issues to let us know which formats should be recognized or submit a pull request (PR).
 
-### Contect
+### Use it in Hexo
+
+If you want to embed the graph in Hexo blog page, see [this](https://uuanqin.top/p/f6c0daf3/)(Chinese).
+
+## Contect
 
 Editor of This version: Wanqin Wu (wuanqin@mail.ustc.edu.cn)
 
 Original Author: Kévin Polisano (kevin.polisano@cnrs.fr)
 
-### Licence
+## Licence
 
 GPLv3

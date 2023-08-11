@@ -164,6 +164,8 @@ Cosma的已知bug：
 
 - Chronological mode 没有按预期工作。参见 [issues-56](https://github.com/graphlab-fr/cosma/issues/56)。
 
+最好不要在您的 Obsidian 保险库中设置输出文件夹。这会让Obsidian在创建或更改双向链接时产生错误，最终导致此脚本运行不正确。
+
 ## 相关仓库
 
 `obsidian2cosma`可以将 Obsidian 知识库转换为 Cosma 和 Zettlr 可以读取的 Markdown 文件集合。相反，也可以执行这个`zettlr2obsidian`脚本 [将 Zettlr Markdown 文件转换为 Obsidian 可识别的知识库](https://gist.github.com/KarlClinckspoor/4ec995fd506ec6483b8e02d8afc388fc/raw/c787747da28d97080c64077352ec6d41e80ae6f5/conversion.py)。
@@ -210,12 +212,16 @@ Cosma的已知bug：
 
 您可以提新 issues 告知我们应该识别哪些新格式，或者直接提交PR。
 
-### 联系方式
+### 将其用于 Hexo 博客框架中
 
-此版本修改者：Wuanqin （邮箱：wuanqin@mail.ustc.edu.cn，个人博客：https://uuanqin.top ）
+将关系图嵌入 Hexo 博客框架页面的方法在我的[中文博客文章](https://uuanqin.top/p/f6c0daf3/)中介绍。
+
+## 联系方式
+
+此版本修改者：Wuanqin （邮箱：wuanqin@mail.ustc.edu.cn，个人博客：https://uuanqin.top）
 
 原作者：Kévin Polisano（kevin.polisano@cnrs.fr）  
 
-### 许可证
+## 许可证
 
 GPLv3
