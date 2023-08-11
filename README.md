@@ -92,6 +92,8 @@ In Cosma, each record should have a unique identifier. Must be a unique number. 
 
 This script provides an optional function to change `ATTRIBUTE`s' name in the front matter. For example, `--attrreplacement categories,types` will change the attribute name '`categories`' to '`types`'. You can also use `--attrreplacement oldname1,newname1 oldname2,newname2 ...` to change more names.
 
+This feature can easily change other format of front-matter into correct one. For example, in [Hexo](https://hexo.io/) posts, `categories` should be `types` in accordance with cosma's rule.
+
 ##### `--ignore`
 
 The script will not copy creation time when copying files from source folder to target folder. It will save time on Windows.

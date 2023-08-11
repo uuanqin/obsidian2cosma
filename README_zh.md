@@ -93,6 +93,8 @@ python obsidian2cosma.py -i input_folder_path -o output_folder_path
 
 这个脚本提供了一个可选功能，可以更改 front matter 中 `ATTRIBUTE` 的名称。例如，`--attrreplacement categories,types` 将属性名称 '`categories`' 更改为 '`types`'。您还可以使用 `--attrreplacement oldname1,newname1 oldname2,newname2 ...`来更改更多的属性名称。
 
+这个功能可以轻松将其他格式的 front matter 转换为正确的格式。例如，在 Hexo 的文章中，`categories` 在 cosma 的规则中应该为 `types`。
+
 ##### `--ignore`
 
 脚本将不会复制文件的创建时间，这将节省脚本在 Windows 上运行的时间。
