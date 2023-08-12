@@ -2,7 +2,7 @@
 
 语言: [English](./README.md) | 中文
 
-这个仓库由[kevinpolisano/obsidian2cosma ](https://github.com/kevinpolisano/obsidian2cosma) Fork 而来并增加了更多功能与增强：
+这个仓库 Fork 自[kevinpolisano/obsidian2cosma ](https://github.com/kevinpolisano/obsidian2cosma) 并增加了更多功能与增强：
 
 * 重写了 YAML 解析器，使之可以解析[更多格式](#解析YAML)的 YAML，摆脱特定关键字的依赖。
 * 重写了创建 ID 的逻辑。参考[此选项](#--method-method)。
@@ -22,26 +22,26 @@
 
 ### Cosma
 
-[Cosma](https://cosma.arthurperret.fr/) 是一个[开源应用](https://github.com/graphlab-fr/cosma)，它可以通过这种方式生成这样一个图形视图：将目录中 Markdown 文本文件之间的关系，生成一个名为 **cosmoscope.html** 的单个 HTML 文件中。它提供了一种简单的方式来探索、可视化以及与他人共享你的知识图谱。*软件来来去去，但数据应该保持存在。*纯文本是**不会过时的**，因此不使笔记过于依赖于特定的软件语法和能够轻松迁移它们的是十分重要的。
+[Cosma](https://cosma.arthurperret.fr/) 是一个[开源应用](https://github.com/graphlab-fr/cosma)，它可以通过这种方式生成这样一个图形视图：将目录中 Markdown 文本文件之间的关系，生成一个名为 **cosmoscope.html** 的单个 HTML 文件中。它提供了一种简单的方式来探索、可视化以及与他人共享你的知识图谱。*软件来来去去，唯数据永恒。*纯文本是**不会过时的**，因此不使笔记过于依赖于特定的软件语法和能够轻松迁移它们的是十分重要的。
 
 ## 将 Obsidian 仓库转换为 Cosma 或 Zettlr 格式的 Python 脚本
 
-- Cosma使用与[Zettlr](https://zettlr.com)（另一个面向学术工作的优秀编辑器）相同的语法，其`[[internal links]]`依赖于唯一标识符`[[id]]`。
+- Cosma使用与 [Zettlr](https://zettlr.com)（另一个面向学术工作的优秀编辑器）相同的语法，其`[[internal links]]`依赖于唯一标识符`[[id]]`。
 - Obsidian则不同，它使用`[[filename]]`链接笔记文件，但限制了**互操作性**。
 
 将 Markdown 文件从 Obsidian 转换为与 Cosma 兼容至少有两个好处:
 
-- 确保您的笔记仍然可以由其他软件读取和编辑，如Zettlr（为了互操作性和防止过时）
+- 确保您的笔记仍然可以由其他软件读取和编辑，如 Zettlr（保证互操作性的同时防止过时）
 - 能够**导出和与 Cosma 共享您的全部或部分知识图谱**，以单个 HTML 页面的形式，同时显示笔记与关系视图。
 
 脚本执行以下步骤:
 
 1. **复制**您的 Obsidian 仓库（input folder）到另一个目录（output folder）以避免仓库内容的意外更改或丢失。以`_`开头的文件夹将被忽略。
-2. *（可选）*根据特定类型或标签**过滤**输出文件夹中的 Markdown 文件。（您也可以编辑 Cosma 的配置文件来实现这一点。请参阅 [Cosma的用户手册](https://cosma.arthurperret.fr/user-manual.html)。）
+2. *（可选）* 根据特定类型或标签**过滤**输出文件夹中的 Markdown 文件。（您也可以编辑 Cosma 的配置文件来实现这一点。请参阅 [Cosma的用户手册](https://cosma.arthurperret.fr/user-manual.html)。）
 3. 为每个 Markdown 文件创建 `id` 和 `title` 元数据字段（缺失相应字段则创建，否则忽略）
 4. **保存**关联对 `(id, title)` 的关系到 CSV 文件中
 5. （默认）将所有在 Obsidian 中使用的 wiki 链接`[[filename]]`**替换**为 [Cosma 双向链接语法](https://cosma.graphlab.fr/en/docs/cli/user-manual/#links)（混合 [Zettlr语法](https://docs.zettlr.com/en/academic/zkn-method/) 和[Obsidian使用别名的样式](https://help.obsidian.md/How+to/Add+aliases+to+note)，即`[[id|alias]]`）。或者增加选项`--zettlr=True`将其替换为 [Zettlr双向链接语法 ](https://docs.zettlr.com/en/academic/zkn-method/)。
-6. *（可选）*替换 Obsidian [Juggl语法](https://juggl.io/Link+Types) 中的 **Typed links** `- prefix [[link]]`为 [Cosma 链接语法](https://cosma.graphlab.fr/en/docs/cli/user-manual/#links) 中更灵活的语法`[[prefix:link]]`
+6. *（可选）* 替换 Obsidian [Juggl语法](https://juggl.io/Link+Types) 中的 **Typed links** `- prefix [[link]]`为 [Cosma 链接语法](https://cosma.graphlab.fr/en/docs/cli/user-manual/#links) 中更灵活的语法`[[prefix:link]]`
 
 ## 安装
 
@@ -54,7 +54,7 @@
 python obsidian2cosma.py -i input_folder_path -o output_folder_path
                                 [--type TYPE] [--tags TAGS]
                                 [--typedlinks TYPEDLINKS]
-								[--semanticsection SEMANTICSECTION]
+                                [--semanticsection SEMANTICSECTION]
                                 [--method METHOD]
                                 [--attrreplacement ATTRIBUTEPAIR1[, ATTRIBUTEPAIR2 ...]]
                                 [--zettlr ZETTLR]
@@ -143,7 +143,7 @@ files_origin: '/path_to_obsidian2cosma/example/LYT-Kit-cosma'
 cosma m
 ```
 
-![Cosma显示的LYT-Kit图形视图](./example/LYT-kit/LYT-kit.png)
+![Cosma显示的LYT-Kit图形视图](https://github.com/uuanqin/obsidian2cosma/blob/main/example/LYT-Kit/LYT-kit.png?raw=true)
 
 ### 使用`obsidian2cosma --zettlr True`将`LYT-Kit/`转换为`LYT-Kit-zettlr/`  
 
@@ -160,13 +160,14 @@ python3 obsidian2cosma.py -i example/LYT-Kit -o example/LYT-Kit-zettlr --method 
 
 这些文件现在可以被 [Zettlr](https://docs.zettlr.com/fr/academic/zkn-method/) 识别。
 
-## 问题
+## 已知问题
 
 Cosma的已知bug：
 
-- Chronological mode 没有按预期工作。参见 [issues-56](https://github.com/graphlab-fr/cosma/issues/56)。
+- Chronological mode 不能自定义 META 字段。参见 [issues-56](https://github.com/graphlab-fr/cosma/issues/56)。
+- ~~（已修复）标题不能仅包含日期，例如 2022-12-26。参见 [issues-33](https://github.com/graphlab-fr/cosma/issues/33)~~
 
-最好不要在您的 Obsidian 保险库中设置输出文件夹。这会让Obsidian在创建或更改双向链接时产生错误，最终导致此脚本运行不正确。
+最好不要在您的 Obsidian 知识库中设置输出文件夹。这会让 Obsidian 在创建或更改双向链接时产生错误，最终导致此脚本运行不正确。
 
 ## 相关仓库
 
@@ -216,13 +217,13 @@ Cosma的已知bug：
 
 ### 将其用于 Hexo 博客框架中
 
-将关系图嵌入 Hexo 博客框架页面的方法在我的[中文博客文章](https://uuanqin.top/p/f6c0daf3/)中介绍。
+将关系图嵌入 Hexo 博客框架页面的方法在我的[这篇](https://uuanqin.top/p/f6c0daf3/)中文博客文章中介绍。
 
 ## 联系方式
 
-此版本修改者：Wuanqin （邮箱：wuanqin@mail.ustc.edu.cn，个人博客：https://uuanqin.top）
+此版本修改者：Wuanqin - wuanqin@mail.ustc.edu.cn - [个人博客](https://uuanqin.top)
 
-原作者：Kévin Polisano（kevin.polisano@cnrs.fr）  
+原作者：Kévin Polisano - kevin.polisano@cnrs.fr
 
 ## 许可证
 

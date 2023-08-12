@@ -141,7 +141,7 @@ Finally, let us create the `cosmoscope.html` by running:
 cosma m
 ```
 
-![LYT-Kit graph view displayed by Cosma](./example/LYT-Kit/LYT-kit.png)
+![LYT-Kit graph view displayed by Cosma](https://github.com/uuanqin/obsidian2cosma/blob/main/example/LYT-Kit/LYT-kit.png?raw=true)
 
 ### `obsidian2cosma --zettlr True` converts `LYT-Kit/` to `LYT-Kit-zettlr/`
 
@@ -212,7 +212,7 @@ You can add new issues to let us know which formats should be recognized or subm
 
 ### Use it in Hexo
 
-If you want to embed the graph in Hexo blog page, see [this](https://uuanqin.top/p/f6c0daf3/)(Chinese).
+If you want to embed the graph in Hexo blog page, see [this article](https://uuanqin.top/p/f6c0daf3/) (Chinese).
 
 ## Contect
 
