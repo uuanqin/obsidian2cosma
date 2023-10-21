@@ -12,7 +12,7 @@ This repository is forked from [kevinpolisano/obsidian2cosma](https://github.com
 * Enhancement on interaction when it was used regularly and frequently. See [this option](#--force).
 * Support the use of UTF-8 charset which means that more languages can be used in files' titles, front-matters and contexts instead of English only.
 * Update README.md and add a Chinese version of that.
-* Others: ID conflict detection, Program running time prompts...
+* Others: ID conflict detection, program running time prompts...
 
 ## Description
 
@@ -52,7 +52,7 @@ In practise, the script follows these steps:
  python obsidian2cosma.py -i input_folder_path -o output_folder_path
                                  [--type TYPE] [--tags TAGS]
                                  [--typedlinks TYPEDLINKS] 
- 								[--semanticsection SEMANTICSECTION]
+                                 [--semanticsection SEMANTICSECTION]
                                  [--method METHOD]
                                  [--attrreplacement ATTRIBUTEPAIR1[, ATTRIBUTEPAIR2 ...]]
                                  [--zettlr ZETTLR]
@@ -199,7 +199,7 @@ What parts of the YAML specifications does it support? It supports:
     - trois
   ```
 
-  It finally converts to `tags: [un, deux, trois]` in output file.
+  It finally converts to `tags: [un, deux, trois]` in the output file.
 
 * Line Folding. Examples:
 
