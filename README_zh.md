@@ -14,6 +14,9 @@
 * 更新 README.md 并增加其中文版本。
 * 其他：ID冲突检测、程序运行时间计算等
 
+自 [cosma v2.1.0](https://cosma.arthurperret.fr/changelog.html) 后，cosma 可以基于标题识别双向链接。
+这个脚本仍会按预期工作，这是因为该脚本会在输出文件中创建`id`参数，cosma 将优先基于此创建双向链接。
+
 ## 简介
 
 ### Obsidian
@@ -164,7 +167,7 @@ python3 obsidian2cosma.py -i example/LYT-Kit -o example/LYT-Kit-zettlr --method 
 
 Cosma的已知bug：
 
-- Chronological mode 不能自定义 META 字段。参见 [issues-56](https://github.com/graphlab-fr/cosma/issues/56)。
+- ~~（已关闭）Chronological mode 不能自定义 META 字段。参见 [issues-56](https://github.com/graphlab-fr/cosma/issues/56)~~。
 - ~~（已修复）标题不能仅包含日期，例如 2022-12-26。参见 [issues-33](https://github.com/graphlab-fr/cosma/issues/33)~~
 
 最好不要在您的 Obsidian 知识库中设置输出文件夹。这会让 Obsidian 在创建或更改双向链接时产生错误，最终导致此脚本运行不正确。

@@ -14,6 +14,9 @@ This repository is forked from [kevinpolisano/obsidian2cosma](https://github.com
 * Update README.md and add a Chinese version of that.
 * Others: ID conflict detection, program running time prompts...
 
+From [cosma v2.1.0](https://cosma.arthurperret.fr/changelog.html), links can now be based on titles. 
+And this script still works as expected since it creates an `id` parameter that cosma will recognize first.
+
 ## Description
 
 ### Obsidian
@@ -160,7 +163,7 @@ These files are now readable by [Zettlr](https://docs.zettlr.com/fr/academic/zkn
 ## Issues
 
 Known bugs in Cosma:
-- Chronological mode does not work as expected. See [issues-56](https://github.com/graphlab-fr/cosma/issues/56).
+- ~~(Closed) Chronological mode does not work as expected. See [issues-56](https://github.com/graphlab-fr/cosma/issues/56).~~
 
 It's better not to set output folder in your Obsidian vault. It will confuse Obsidian to create or change wiki links and finally cause this script to run incorrectly.
 
